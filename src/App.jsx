@@ -1,6 +1,6 @@
 
 import './App.css'
-import {Router,Route,Switch} from "react-router-dom"
+import { Router, Route, Switch } from "react-router-dom"
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import About from './components/About'
@@ -15,18 +15,18 @@ function App() {
 
   return (
     <>
-    <Router>
-    <Navbar />
-    <Switch>
-      <Route path='/' element={<Home />} />
-      <Route path='/about' element={<About />} />
-      <Route path='/skills' element={<Skills />} />
-      <Route path='/edu' element={<Educations />} />
-      <Route path='/prj' element={<Projects />} />
-      <Route path='/con' element={<Contact />} />
-    </Switch>
-    <Footer />
-    </Router>
+      <Router>
+        <Navbar />
+        <Route path='/' element={<Home />} />
+        <Switch>
+          <Route path='/about' element={<About />} />
+          <Route path='/skills' element={<Skills />} />
+          <Route path='/edu' element={<Educations />} />
+          <Route path='/prj' element={<Projects />} />
+          <Route path='/con' element={<Contact />} />
+        </Switch>
+        <Footer />
+      </Router>
     </>
   )
 }
